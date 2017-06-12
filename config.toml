@@ -1,0 +1,20 @@
+baseURL = "https://joshua.codes/"
+languageCode = "en-gb"
+title = "Joshua Finch"
+pygmentsstyle = "xcode"
+enableRobotsTXT = true
+
+disableKinds = ["section", "taxonomy", "taxonomyTerm"]
+
+authors = ["Joshua Finch"]
+
+[permalinks]
+  post = "/:title/"
+
+[params]
+  [params.social]
+    github = "joshuafinch"
+    facebook = "josh.p.finch"
+    twitter	= "joshpfinch"
+    twitter_domain	= "joshua.codes"
+    linkedin = "joshuafinch"

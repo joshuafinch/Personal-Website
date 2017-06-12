@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /post/
+Disallow: /categories/
+Disallow: /tags/
+Sitemap: {{ .Site.BaseURL }}sitemap.xml
