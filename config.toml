@@ -8,6 +8,10 @@ disableKinds = ["section", "taxonomy", "taxonomyTerm"]
 
 authors = ["Joshua Finch"]
 
+[outputs]
+  home = ["HTML", "AMP", "RSS"]
+  page = ["HTML", "AMP"]
+
 [permalinks]
   post = "/:title/"
 
