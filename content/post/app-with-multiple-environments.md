@@ -10,9 +10,7 @@ The majority of iOS applications i've developed in the past have had to connect 
 
 The benefit of having multiple environments means you can ensure rapid development, and adapt to changes in a development environment without having to worry about your changes affecting current users in a production environment.
 
-But having to go into your code, and change the url's that you're connecting to each time you want to test your application against each of the environments is prone to human error, and slows down your development, testing and deployment processes.
-
-<!--more-->
+But having to go into your code, and change the url's that you're connecting to each time you want to test your application against each of the environments is prone to human error, and slows down your development, testing and deployment processes.<!--more-->
 
 ## The good, the bad and the ugly
 
