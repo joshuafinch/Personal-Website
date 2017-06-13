@@ -2,6 +2,7 @@ baseURL = "https://joshua.codes/"
 languageCode = "en-gb"
 title = "Joshua Finch"
 pygmentsstyle = "xcode"
+pygmentsUseClasses = true
 enableRobotsTXT = true
 
 disableKinds = ["section", "taxonomy", "taxonomyTerm"]
