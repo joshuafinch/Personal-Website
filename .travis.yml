@@ -8,7 +8,7 @@ git:
 
 addons:
   ssh_known_hosts:
-    - $DEPLOYHOST
+    - 144.76.222.69
   apt:
     packages:
       - sshpass
