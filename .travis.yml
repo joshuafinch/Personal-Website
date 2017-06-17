@@ -7,7 +7,8 @@ git:
   submodules: false
 
 addons:
-  ssh-known-hosts: $DEPLOYHOST
+  ssh_known_hosts:
+    - $DEPLOYHOST
   apt:
     packages:
       - sshpass
@@ -28,10 +29,11 @@ before_deploy:
  - eval "$(ssh-agent -s)"
  - chmod 600 /tmp/travis_deploy_rsa
  - sshpass -p $SSHPASSPHRASE ssh-add /tmp/travis_deploy_rsa
+ - ssh-add -l
 
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync -r --exclude '/.htaccess' --exclude '/.well-known/' --delete-after --quiet $TRAVIS_BUILD_DIR/public $DEPLOYUSER@$DEPLOYHOST:$DEPLOYDIR
+  script: deploy.sh
   on:
     branch: master
