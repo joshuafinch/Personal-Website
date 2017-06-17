@@ -3,8 +3,15 @@ sudo: required
 
 language: go
 
+git:
+  submodules: false
+
 addons:
   ssh-known-hosts: $DEPLOYHOST
+
+before_install:
+  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+  - git submodule update --init --recursive
 
 install:
  - wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.23/hugo_0.23_Linux-64bit.deb
