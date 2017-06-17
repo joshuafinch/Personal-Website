@@ -8,6 +8,9 @@ git:
 
 addons:
   ssh-known-hosts: $DEPLOYHOST
+  apt:
+    packages:
+      - sshpass
 
 before_install:
   - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
