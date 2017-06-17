@@ -16,13 +16,13 @@ You can do this, by selecting your project from the project hierarchy window, an
 
 This will bring up your project info settings, and show your current configurations. By default on a new project you should have `Debug` and `Release` configurations.
 
-![Default Configurations](/static/configurations_default.png)
+{{< image src="/static/configurations_default.png" width="1366px" height="616px" alt="Default configurations" >}}
 
 For the example i'm going to show you, we're going to have 3 sets of configurations. One for our development environment and settings, one for staging, and a final one for production.
 
 Start by duplicate the `Debug` configuration twice (using the `+` icon), renaming the first to `DebugDev` and the second to `DebugStaging`. Then duplicate the `Release` configuration twice, similarly naming them as `ReleaseDev` and `ReleaseStaging`. Once done, it should look like the below image.
 
-![Multiple Configurations](/static/multiple_configurations.png)
+{{< image src="/static/multiple_configurations.png" width="1120px" height="896px" alt="Multiple configurations" >}}
 
 If you're using Cocoapods to manage your frameworks, you'll need to run the following command to ensure it regenerates the appropriate `.xcconfig` files. Otherwise it will continue to use your debug and release xcconfig cocoapod files, and may cause issues down the line.
 
@@ -39,7 +39,7 @@ Go to your target build settings, and search for `Other Swift Flags`, similarly 
 Expand the build setting, and you should see all six configurations.
 Lets set the `-D DEVELOPMENT` and `-D STAGING` flags for the development and staging configurations respectively (for both debug and release versions).
 
-![Other Swift Flags](/static/other_swift_flags_2.png)
+{{< image src="/static/other_swift_flags_2.png" width="1586px" height="450px" alt="Other Swift Flags" >}}
 
 Once you have these flags set, you'll be able to use them inside your Swift code to [conditionally compile different functionality](/app-with-multiple-environments/).
 
@@ -60,7 +60,7 @@ You'll want to duplicate the auto-created scheme for your iOS target, and rename
 
 You'll also want to make sure you've marked each of those three schemes as 'Shared'. This option means the schemes are made available to other developers working on your code base, and also makes those schemes available to your Continuous Integration/Deployment servers. If you leave this option unticked, it will remain only available to you, and not visible to other developers on your project (which can be useful when you have schemes with personal settings setup).
 
-![Manage Schemes](/static/manage_schemes.png)
+{{< image src="/static/manage_schemes.png" width="1366px" height="408px" alt="Manage schemes" >}}
 
 Now you have your schemes, we need to edit them a little to make sure they're using the appropriate configurations when building, testing, profiling, archiving and running.
 
@@ -70,7 +70,7 @@ Once done, you can close the edit scheme interface, and swap over to your stagin
 
 If you've managed to do this correctly, it should look similar to the following.
 
-![Different Configurations for Scheme](/static/different_configurations.png)
+{{< image src="/static/different_configurations.png" width="1394px" height="530px" alt="Different configurations for scheme" >}}
 
 Run you app using the different schemes, and observe how your app responds to the compiled code changing, without you having to manually change any of your code.
 

@@ -40,7 +40,7 @@ This will set the configuration file to be used at the project level for each co
 
 If you're using Cocoapods, you'll notice Cocoapods have their own `.xconfig` files they're using - and they by default set their config to be used at the target level for each configuration. Cocoapods is quite intrusive in how it affects your project/workspace, and is generally one of the reasons I prefer to use Carthage where possible instead.
 
-![Configurations with xcconfig](/static/configurations_with_xcconfig.png)
+{{< image src="/static/configurations_with_xcconfig.png" width="1052px" height="540px" alt="Configurations with xcconfig" >}}
 
 ## Filling your .xcconfig file
 
