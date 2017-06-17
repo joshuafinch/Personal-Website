@@ -1,36 +1,28 @@
 dist: trusty
 sudo: required
-
 language: go
-
 git:
   submodules: false
-
 addons:
   ssh_known_hosts:
-    - 144.76.222.69
-  apt:
-    packages:
-      - sshpass
-
+  - 144.76.222.69
 before_install:
-  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
-  - git submodule update --init --recursive
-
+- openssl aes-256-cbc -K $encrypted_c2be883572d5_key -iv $encrypted_c2be883572d5_iv -in travis_deploy_rsa.enc -out /tmp/travis_deploy_rsa -d
+- sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+- git submodule update --init --recursive
 install:
- - wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.23/hugo_0.23_Linux-64bit.deb
- - sudo dpkg -i /tmp/hugo.deb
-
+- wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.23/hugo_0.23_Linux-64bit.deb
+- sudo dpkg -i /tmp/hugo.deb
 script:
- - rm -Rf public && hugo
-
+- rm -Rf public
+- hugo
 before_deploy:
- - openssl aes-256-cbc -K $encrypted_c2be883572d5_key -iv $encrypted_c2be883572d5_iv -in travis_deploy_rsa.enc -out /tmp/travis_deploy_rsa -d
- - eval "$(ssh-agent -s)"
- - chmod 600 /tmp/travis_deploy_rsa
- - sshpass -p $SSHPASSPHRASE ssh-add /tmp/travis_deploy_rsa
- - ssh-add -l
-
+- openssl aes-256-cbc -K $encrypted_c2be883572d5_key -iv $encrypted_c2be883572d5_iv
+  -in travis_deploy_rsa.enc -out /tmp/travis_deploy_rsa -d
+- eval "$(ssh-agent -s)"
+- chmod 600 /tmp/travis_deploy_rsa
+- ssh-add /tmp/travis_deploy_rsa
+- ssh-add -l
 deploy:
   provider: script
   skip_cleanup: true
