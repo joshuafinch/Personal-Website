@@ -63,4 +63,4 @@ Over the next few blog posts, i'll be showing you how you can setup multiple con
 
 We'll also look into some nice benefits you can gain such as being able to have the same app installed multiple times on the same device, and optionally giving them different names, and app icons representing each of their configurations.
 
-Check out my next blog post on [multiple configurations](/multiple-configurations/).
+Check out my next blog post on {{< link relref="multiple-configurations" text="multiple configurations" >}}.

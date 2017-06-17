@@ -6,7 +6,7 @@ draft = false
 
 We're going to take a look at creating multiple configurations for our application, and then using schemes to point at each of the different configurations.
 
-If you haven't checked out my [previous blog post](/app-with-multiple-environments/) on multiple environments, i'd suggest taking a look at that first, as this will be directly building upon some of the concepts shown in there.
+If you haven't checked out my {{< link relref="app-with-multiple-environments" text="previous blog post" >}} on multiple environments, i'd suggest taking a look at that first, as this will be directly building upon some of the concepts shown in there.
 
 ## Creating configurations
 
@@ -41,7 +41,7 @@ Lets set the `-D DEVELOPMENT` and `-D STAGING` flags for the development and sta
 
 {{< image src="/static/other_swift_flags_2.png" width="1586" height="450" alt="Other Swift Flags" >}}
 
-Once you have these flags set, you'll be able to use them inside your Swift code to [conditionally compile different functionality](/app-with-multiple-environments/).
+Once you have these flags set, you'll be able to use them inside your Swift code to {{< link relref="handling-multiple-environments-in-ios" text="conditionally compile different functionality" >}}.
 
 Currently, when you run the application it will use the Debug or Release configurations. It will continue to use the production settings - and not use the development, or staging ones. This is because we've set it to default to production settings if a `DEVELOPMENT` or `STAGING` flag has not been set.
 
@@ -80,4 +80,4 @@ With this, you'll be able to setup your Continuous Integration server to build, 
 
 This is an extensible solution, and you can always create as many configurations, and as many schemes as your product requires.
 
-In the next blog post, i'll be going over using `.xcconfig` files to [better manage your shared configuration build settings](/manage-your-build-settings-with-xcconfigs).
+In the next blog post, i'll be going over using `.xcconfig` files to {{< link relref="manage-your-build-settings-with-xcconfigs" text="better manage your shared configuration build settings" >}}.

@@ -14,7 +14,7 @@ Since using them in my own personal projects, and at work - i've not looked back
 
 They also have the added benefit of being reusable between projects, targets, and configurations.
 
-In the previous blog post on [multiple configurations](/multiple-configurations/) we grew from two configurations (`Debug` and `Release`) to around six configurations, to represent our three environments (Development, Staging and Production).
+In the previous blog post on {{< link relref="multiple-configurations" text="multiple configurations" >}} we grew from two configurations (`Debug` and `Release`) to around six configurations, to represent our three environments (Development, Staging and Production).
 
 This meant duplicating a lot of build settings for the Debug, and Release configurations - for us to only change a few build settings for each environment.
 
