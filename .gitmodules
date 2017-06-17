@@ -1,0 +1,3 @@
+[submodule "themes/finch"]
+	path = themes/finch
+	url = git@github.com:joshuafinch/hugo-finch.git

@@ -4,6 +4,7 @@ title = "Joshua Finch"
 pygmentsstyle = "xcode"
 pygmentsUseClasses = true
 enableRobotsTXT = true
+theme = "finch"
 
 disableKinds = ["section", "taxonomy", "taxonomyTerm"]
 
