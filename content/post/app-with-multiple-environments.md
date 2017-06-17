@@ -53,7 +53,7 @@ private var config: Config {
 
 To setup the above flags, `DEVELOPMENT` and `STAGING` you will need to go to your target build settings, and search for `Other Swift Flags`. You can then set your flags for each configuration, prefixed by a `-D`, for example `-D DEVELOPMENT` or `-D STAGING`.
 
-{{< image src="/static/other_swift_flags.png" width="1510px" height="420px" alt="Other Swift Flags" >}}
+{{< image src="/static/other_swift_flags.png" width="1510" height="420" alt="Other Swift Flags" >}}
 
 The above example only has the two default configurations, `Debug` and `Release` - by default you'll be able to test you changes by running the app in the simulator for the `Debug` configuration, or creating an archive and running that on device for the `Release` configuration. You can also test the different configurations by changing the run behaviour of your scheme to use `Release` instead of `Debug`.
 
