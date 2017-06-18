@@ -6,6 +6,9 @@ git:
 addons:
   ssh_known_hosts:
   - 144.76.222.69
+  apt:
+    packages:
+      - pygments
 before_install:
 - openssl aes-256-cbc -K $encrypted_c2be883572d5_key -iv $encrypted_c2be883572d5_iv -in travis_deploy_rsa.enc -out /tmp/travis_deploy_rsa -d
 - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
