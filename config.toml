@@ -18,6 +18,8 @@ authors = ["Joshua Finch"]
   post = "/:title/"
 
 [params]
+  googleAnalytics = "UA-101183481-1"
+
   [params.social]
     github = "joshuafinch"
     facebook = "josh.p.finch"
