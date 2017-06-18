@@ -26,6 +26,6 @@ before_deploy:
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync -r --exclude '/.htaccess' --exclude '/.well-known/' --delete-after --quiet $TRAVIS_BUILD_DIR/public $DEPLOYUSER@$DEPLOYHOST:$DEPLOYDIR
+  script: rsync -rv --exclude '/.htaccess' --exclude '/.well-known/' --exclude=.DS_Store --delete-after $TRAVIS_BUILD_DIR/public/ $DEPLOYUSER@$DEPLOYHOST:$DEPLOYDIR
   on:
     branch: master
