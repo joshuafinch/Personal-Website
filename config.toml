@@ -19,6 +19,7 @@ authors = ["Joshua Finch"]
 
 [params]
   googleAnalytics = "UA-101183481-1"
+  rss = true
 
   [params.social]
     github = "joshuafinch"

@@ -4,7 +4,7 @@ title = "Multiple configurations"
 draft = false
 +++
 
-We're going to take a look at creating multiple configurations for our application, and then using schemes to point at each of the different configurations.
+We're going to take a look at creating multiple configurations for our application, and then using schemes to point at each of the different configurations.<!--more-->
 
 If you haven't checked out my {{< link relref="handling-multiple-environments-in-ios" text="previous blog post" >}} on multiple environments, i'd suggest taking a look at that first, as this will be directly building upon some of the concepts shown in there.
 

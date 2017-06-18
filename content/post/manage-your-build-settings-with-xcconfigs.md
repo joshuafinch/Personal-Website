@@ -8,7 +8,7 @@ These magical `.xcconfig` files, what are they exactly?
 
 Apple describes them as follows:
 
-> A build configuration file, also known as an xcconfig file, is a plain text file that defines and overrides the build settings for a particular build configuration of a project or target. This type of file can be edited outside of Xcode and integrates well with source control systems. Build configuration files adhere to specific formatting rules, and produce build warnings if they do not.
+> A build configuration file, also known as an xcconfig file, is a plain text file that defines and overrides the build settings for a particular build configuration of a project or target. This type of file can be edited outside of Xcode and integrates well with source control systems. Build configuration files adhere to specific formatting rules, and produce build warnings if they do not.<!--more-->
 
 Since using them in my own personal projects, and at work - i've not looked back. They make understanding changes made to build settings when looking at version control significantly easier than attempting to understand changes made through the normal Build Settings pane of Xcode - which just changes your underlying XML-based Xcode project file.
 

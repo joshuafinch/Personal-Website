@@ -4,13 +4,13 @@ title = "Handling multiple environments in iOS"
 draft = false
 +++
 
-Most iOS applications need to connect to one or more web services, when developing these applications, you normally need to connect to various different environments for each of these web services as they're being developed, especially if you're creating the web service yourself.
+Most iOS applications need to connect to one or more web services, when developing these applications, you normally need to connect to various different environments for each of these web services as they're being developed, especially if you're creating the web service yourself.<!--more-->
 
 The majority of iOS applications i've developed in the past have had to connect to various different environments for each of the web services they connect to. Usually we have a development, test (or staging) and production (or live) environment for each independent web service we develop ourselves.  
 
 The benefit of having multiple environments means you can ensure rapid development, and adapt to changes in a development environment without having to worry about your changes affecting current users in a production environment.
 
-But having to go into your code, and change the url's that you're connecting to each time you want to test your application against each of the environments is prone to human error, and slows down your development, testing and deployment processes.<!--more-->
+But having to go into your code, and change the url's that you're connecting to each time you want to test your application against each of the environments is prone to human error, and slows down your development, testing and deployment processes.
 
 ## The good, the bad and the ugly
 
