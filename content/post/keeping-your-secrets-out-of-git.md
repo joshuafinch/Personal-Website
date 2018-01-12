@@ -8,7 +8,7 @@ Ever had problems with pesky API keys, or developer-specific configurations maki
 
 API keys, client secrets and other little gems slowly creep their way into your project. If your project is going to be public-facing, or ever wants to be in the future, you probably don't want these values to be committed to your git history for the world to see.
 
-In a lot of the projects i've worked on in the past, theres usually a configuration file or two with default values for the application. Generally during development, i'd change these files for example to point to different environments, turn on / off various features of an application or to quickly get to certain parts of an application during development.
+In a lot of the projects I've worked on in the past, there is usually a configuration file or two with default values for the application. Generally during development, I'd change these files for example to point to different environments, turn on / off various features of an application or to quickly get to certain parts of an application during development.
 
 When working in a team, each developer or tester might want different values for the configurations and therefore its important that when they change these configuration files, they're not overwriting the default file in the index.
 

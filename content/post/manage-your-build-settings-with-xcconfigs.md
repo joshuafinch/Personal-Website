@@ -10,7 +10,7 @@ Apple describes them as follows:
 
 > A build configuration file, also known as an xcconfig file, is a plain text file that defines and overrides the build settings for a particular build configuration of a project or target. This type of file can be edited outside of Xcode and integrates well with source control systems. Build configuration files adhere to specific formatting rules, and produce build warnings if they do not.<!--more-->
 
-Since using them in my own personal projects, and at work - i've not looked back. They make understanding changes made to build settings when looking at version control significantly easier than attempting to understand changes made through the normal Build Settings pane of Xcode - which just changes your underlying XML-based Xcode project file.
+Since using them in my own personal projects, and at work - I've not looked back. They make understanding changes made to build settings when looking at version control significantly easier than attempting to understand changes made through the normal Build Settings pane of Xcode - which just changes your underlying XML-based Xcode project file.
 
 They also have the added benefit of being reusable between projects, targets, and configurations.
 
@@ -46,7 +46,7 @@ If you're using Cocoapods, you'll notice Cocoapods have their own `.xconfig` fil
 
 With your configuration file now being used by each of your configurations, its time for the fairly laborious initial process of filling it with the default settings.
 
-The way i've done this in the past is to copy the build settings from the target. This way, you can guarantee that at the end you will have all of the same build settings that you started with, but in configuration file form instead of in your customised build settings pane of Xcode.
+The way I've done this in the past is to copy the build settings from the target. This way, you can guarantee that at the end you will have all of the same build settings that you started with, but in configuration file form instead of in your customised build settings pane of Xcode.
 
 Start by going to your target build settings (not your project build settings).
 
@@ -217,4 +217,4 @@ You now have all of your build settings in a `.xcconfig` file. Its far easier to
 
 Just be sure to try your best to update your build settings in the future using this file, instead of manually setting (and overriding) the build settings in the Xcode build settings pane.
 
-In my next blog post, i'll be going over some of the other benefits you can gain from having multiple configurations, other than just conditional compilation which we've demonstrated here.
+In my next blog post, I'll be going over some of the other benefits you can gain from having multiple configurations, other than just conditional compilation which we've demonstrated here.

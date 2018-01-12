@@ -6,7 +6,7 @@ draft = false
 
 Most iOS applications need to connect to one or more web services, when developing these applications, you normally need to connect to various different environments for each of these web services as they're being developed, especially if you're creating the web service yourself.<!--more-->
 
-The majority of iOS applications i've developed in the past have had to connect to various different environments for each of the web services they connect to. Usually we have a development, test (or staging) and production (or live) environment for each independent web service we develop ourselves.  
+The majority of iOS applications I've developed in the past have had to connect to various different environments for each of the web services they connect to. Usually we have a development, test (or staging) and production (or live) environment for each independent web service we develop ourselves.  
 
 The benefit of having multiple environments means you can ensure rapid development, and adapt to changes in a development environment without having to worry about your changes affecting current users in a production environment.
 
@@ -16,9 +16,9 @@ But having to go into your code, and change the url's that you're connecting to 
 
 Having seen how myself and other developers have managed applications that need to connect to different environments, with different settings for each configuration, there are various ways this can be achieved.
 
-One of the ways i've seen this done is by creating another target, and separate application executable. Personally I find this error-prone as it relies on each of the application developers remembering to add their source files to each application target as they're created. It also makes it harder to reason as a tester of the application, whether a release version will be using the same code as the development version, barring expected configuration changes.
+One of the ways I've seen this done is by creating another target, and separate application executable. Personally I find this error-prone as it relies on each of the application developers remembering to add their source files to each application target as they're created. It also makes it harder to reason as a tester of the application, whether a release version will be using the same code as the development version, barring expected configuration changes.
 
-Another way i've seen this problem tackled, was to have separate configuration source code files - and allow the build process to switch between them using a run script as a part of an Xcode scheme, or as a build script as a part of the target. Like the above solution, this can work but it is also prone to similar errors. When developing with these separate files - you need to make sure they're kept in-sync, can all compile, and behave as expected. You will have no guarantee that the run/build scripts will copy and replace the file with the correct configuration; and it creates source-level changes each time you need to do a build will affect your version control.
+Another way I've seen this problem tackled, was to have separate configuration source code files - and allow the build process to switch between them using a run script as a part of an Xcode scheme, or as a build script as a part of the target. Like the above solution, this can work but it is also prone to similar errors. When developing with these separate files - you need to make sure they're kept in-sync, can all compile, and behave as expected. You will have no guarantee that the run/build scripts will copy and replace the file with the correct configuration; and it creates source-level changes each time you need to do a build will affect your version control.
 
 There is a better way that doesn't make source-level changes at build time, and as such won't mess about with your files in version control. It also won't have the problem of multiple targets, with different build settings, different run/build scripts, and different files being compiled.
 
@@ -59,7 +59,7 @@ The above example only has the two default configurations, `Debug` and `Release`
 
 Not only can conditional compilation be used for changes in environment urls, you can use it for pretty much anything. Some other examples might include setting different client ids for your app analytics to avoid mixing development and production data, or even preventing your application from hitting a web api, and serving data locally from the code, or file system instead.  
 
-Over the next few blog posts, i'll be showing you how you can setup multiple configurations (if the two default ones are not enough), how you can utilise multiple schemes to run the application against different configurations, how you can use `xcconfig` files to better manage and track changes to your build settings across multiple configurations, and allow your continuous integration server to create different builds of your application.
+Over the next few blog posts, I'll be showing you how you can setup multiple configurations (if the two default ones are not enough), how you can utilise multiple schemes to run the application against different configurations, how you can use `xcconfig` files to better manage and track changes to your build settings across multiple configurations, and allow your continuous integration server to create different builds of your application.
 
 We'll also look into some nice benefits you can gain such as being able to have the same app installed multiple times on the same device, and optionally giving them different names, and app icons representing each of their configurations.
 

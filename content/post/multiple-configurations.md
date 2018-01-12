@@ -6,7 +6,7 @@ draft = false
 
 We're going to take a look at creating multiple configurations for our application, and then using schemes to point at each of the different configurations.<!--more-->
 
-If you haven't checked out my {{< link relref="handling-multiple-environments-in-ios" text="previous blog post" >}} on multiple environments, i'd suggest taking a look at that first, as this will be directly building upon some of the concepts shown in there.
+If you haven't checked out my {{< link relref="handling-multiple-environments-in-ios" text="previous blog post" >}} on multiple environments, I'd suggest taking a look at that first, as this will be directly building upon some of the concepts shown in there.
 
 ## Creating configurations
 
@@ -18,7 +18,7 @@ This will bring up your project info settings, and show your current configurati
 
 {{< image src="/static/configurations_default.png" width="1366" height="616" alt="Default configurations" >}}
 
-For the example i'm going to show you, we're going to have 3 sets of configurations. One for our development environment and settings, one for staging, and a final one for production.
+For the example I'm going to show you, we're going to have 3 sets of configurations. One for our development environment and settings, one for staging, and a final one for production.
 
 Start by duplicate the `Debug` configuration twice (using the `+` icon), renaming the first to `DebugDev` and the second to `DebugStaging`. Then duplicate the `Release` configuration twice, similarly naming them as `ReleaseDev` and `ReleaseStaging`. Once done, it should look like the below image.
 
@@ -80,4 +80,4 @@ With this, you'll be able to setup your Continuous Integration server to build, 
 
 This is an extensible solution, and you can always create as many configurations, and as many schemes as your product requires.
 
-In the next blog post, i'll be going over using `.xcconfig` files to {{< link relref="manage-your-build-settings-with-xcconfigs" text="better manage your shared configuration build settings" >}}.
+In the next blog post, I'll be going over using `.xcconfig` files to {{< link relref="manage-your-build-settings-with-xcconfigs" text="better manage your shared configuration build settings" >}}.
